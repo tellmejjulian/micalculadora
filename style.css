@@ -8,6 +8,7 @@
 
 body {
     font-family: sans-serif;
+    background-image: linear-gradient( to bottom right, rgb(55, 0, 255),rgb(255, 0, 183));
 }
 
 a {
@@ -15,22 +16,20 @@ a {
     color: #fff;
 }
 
-body {
-    background-image: linear-gradient( to bottom right, rgb(55, 0, 255),rgb(255, 255, 255),rgb(255, 0, 183));
-}
-
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    place-items: relative;
+    align-items: stretch;
 }
 
 .calculator {
     position: relative;
-    height: auto;
-    width: auto;
-    padding: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
 }
 
 .theme-toggler {
@@ -66,7 +65,7 @@ body {
     margin: 0 10px;
     height: 150px;
     width: auto;
-    max-width: 270px;
+    max-width: 750px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -80,11 +79,20 @@ body {
     height: 3px;
 }
 
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 0px;
+  }
+
 button {
-    height: 60px;
-    width: 60px;
+    display: flex;
+  	align-items: center;
+  	justify-content: center;
+    height: 90px;
+    width: 90px;
     border: 0;
-    border-radius: 40px;
+    border-radius: 50%;
     margin: 5px;
     font-size: 20px;
     cursor: pointer;
